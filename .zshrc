@@ -1,1 +1,0 @@
-/home/tian/.zshrc
