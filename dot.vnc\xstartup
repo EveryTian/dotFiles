@@ -1,0 +1,10 @@
+#!/bin/sh
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+_xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+exec dbus-launch startplasma-x11 &
+
